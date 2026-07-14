@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<!-- ============================================================
+  YOGA SHALA SHANGRI LA
+  Files: index.html + style.css + scripts.js + assets/logo*.png
+
+  ✏️  QUICK EDITS (search in this file):
+  1. ADDRESS  → search "Str. Exemplu"      (replace with the real street)
+  2. MAP      → search "maps?q="           (replace "Timisoara%2C%20Romania"
+                with your URL-encoded address, e.g. "Str.+Exemplu+12+Timisoara")
+  3. EMAIL    → search "hello@yogashala"   (2 places: card + mailto link)
+  4. PHONE    → search "+40 712"           (and the tel:+40712345678 link)
+  5. SCHEDULE → search "sched-grid"        (edit times/class names freely)
+  6. INSTAGRAM→ search "instagram"
+
+  No build step needed — open index.html in a browser, or upload the
+  whole folder to any host (Netlify / GitHub Pages / cPanel).
+============================================================ -->
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Yoga Shala Shangri La — Welcome home, to the paradise within</title>
+<meta name="description" content="Yoga Shala Shangri La — a warm yoga home in Timișoara. Hatha, Vinyasa, Yin, gong baths and Peter Hess singing bowl journeys." />
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Caveat:wght@500;600&family=Mulish:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- ==================== NAV ==================== -->
+<nav class="nav" id="nav">
+  <a class="nav-brand" href="#top" aria-label="Yoga Shala Shangri La — home">
+    <img src="assets/logo.png" alt="" aria-hidden="true">
+    <span class="word">Yoga Shala <em style="font-family:var(--font-script);font-style:normal;color:var(--brass);">Shangri&nbsp;La</em></span>
+  </a>
+  <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#sound">Sound temple</a></li>
+    <li><a href="#schedule">Schedule</a></li>
+    <li><a href="#visit">Find us</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ==================== HERO ==================== -->
+<header class="hero" id="top">
+  <div class="hero-stars" id="stars" aria-hidden="true"></div>
+  <img class="hero-logo breathe-img" src="assets/logo-white.png" alt="Yoga Shala Shangri La logo" style="filter:drop-shadow(0 12px 40px rgba(0,0,0,.35));animation:breathe 7s var(--ease-breath) infinite;">
+  <h1>Yoga Shala</h1>
+  <div class="sub script">Shangri La</div>
+  <p class="tagline">Welcome home… to the paradise within. A small, warm shala where breath, movement and sound meet.</p>
+  <div class="hero-cta">
+    <a class="btn btn-brass" href="#schedule">See the schedule</a>
+    <a class="btn btn-ghost" href="#sound">Ring the gong</a>
+  </div>
+  <button class="scroll-cue" id="scrollCue" aria-label="Scroll down">
+    <svg viewBox="0 0 56 30" aria-hidden="true">
+      <path pathLength="1" d="M28 15 C22 6, 8 6, 6 15 C4 24, 18 26, 28 15 C38 4, 52 6, 50 15 C48 24, 34 24, 28 15"/>
+    </svg>
+    breathe in · scroll down
+  </button>
+</header>
+
+<!-- ==================== JOURNEY (thread spans the whole main) ==================== -->
+<main class="journey" id="journey">
+  <div class="thread-wrap" aria-hidden="true">
+    <svg id="threadSvg" viewBox="0 0 100 1000" preserveAspectRatio="none">
+      <path class="thread-base" id="threadBase"
+        d="M50 0 C 50 30, 88 55, 88 95 C 88 135, 12 160, 12 205 C 12 250, 88 275, 88 320 C 88 365, 12 390, 12 435 C 12 480, 88 505, 88 550 C 88 595, 12 620, 12 665 C 12 710, 88 735, 88 780 C 88 825, 12 850, 12 895 C 12 940, 50 960, 50 1000"/>
+      <path class="thread-draw" id="threadDraw" pathLength="1"
+        d="M50 0 C 50 30, 88 55, 88 95 C 88 135, 12 160, 12 205 C 12 250, 88 275, 88 320 C 88 365, 12 390, 12 435 C 12 480, 88 505, 88 550 C 88 595, 12 620, 12 665 C 12 710, 88 735, 88 780 C 88 825, 12 850, 12 895 C 12 940, 50 960, 50 1000"/>
+    </svg>
+  </div>
+  <div class="traveler" id="traveler" aria-hidden="true">
+    <img src="assets/logo-white.png" alt="">
+  </div>
+
+  <!-- ==================== ABOUT ==================== -->
+  <section class="section-pad" id="about">
+    <div class="wrap">
+      <div class="about-grid">
+        <div class="reveal">
+          <div class="eyebrow">The shala</div>
+          <div class="script-lead">A paradise doesn't have to be far away.</div>
+          <h2>A yoga home, not just a studio</h2>
+          <p class="lede">
+            Yoga Shala Shangri La is a light-filled practice room with straw mats underfoot,
+            cream walls, and a great gong watching over the space. Here, yoga is not a
+            performance — it is a homecoming. Classes are small and personal, taught with
+            care for where <em>you</em> are today: your breath, your body, your season of life.
+          </p>
+          <p class="lede" style="margin-top:1rem;">
+            Whether you arrive stiff from a desk, restless from a busy mind, or simply
+            curious, you'll find a practice that meets you gently — Hatha and Vinyasa to
+            move, Yin to soften, and sound to let go completely.
+          </p>
+        </div>
+        <div class="about-visual reveal" aria-hidden="true">
+          <img class="inner-logo" src="assets/logo.png" alt="Yoga Shala Shangri La logo on a woven mat arch">
+          <div class="arch-label">the paradise within</div>
+        </div>
+      </div>
+
+      <div class="why-cards">
+        <div class="why-card reveal">
+          <img class="glyph" src="assets/logo.png" alt="">
+          <h3>Small circles, real attention</h3>
+          <p>Intimate groups mean the teacher actually sees you — alignment, breath, mood. Adjustments are personal, never one-size-fits-all.</p>
+        </div>
+        <div class="why-card reveal" style="transition-delay:.12s">
+          <svg class="glyph" viewBox="0 0 100 100" style="color:var(--brass)">
+            <circle cx="50" cy="50" r="30" fill="none" stroke="currentColor" stroke-width="6"/>
+            <circle cx="50" cy="50" r="14" fill="none" stroke="currentColor" stroke-width="5"/>
+            <circle cx="50" cy="50" r="3.5" fill="currentColor"/>
+          </svg>
+          <h3>Every body, every level</h3>
+          <p>Absolute beginners are the shala's favourite guests. Props, patience and playful variations make each posture yours.</p>
+        </div>
+        <div class="why-card reveal" style="transition-delay:.24s">
+          <svg class="glyph" viewBox="0 0 100 100" style="color:var(--brass)">
+            <ellipse cx="50" cy="62" rx="30" ry="16" fill="none" stroke="currentColor" stroke-width="6"/>
+            <path d="M20 62 Q50 40 80 62" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+            <path d="M30 30 q4 -8 8 0 M46 24 q4 -8 8 0 M62 30 q4 -8 8 0" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+          </svg>
+          <h3>Sound as medicine</h3>
+          <p>Gong baths and Peter Hess® singing bowls carry the nervous system into deep rest — the kind of stillness sleep sometimes forgets.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SOUND TEMPLE ==================== -->
+  <section class="dark section-pad" id="sound">
+    <div class="wrap">
+      <div class="eyebrow" style="color:var(--brass-light)">The sound temple</div>
+      <div class="script-lead">Close your eyes. Now listen with your whole body.</div>
+      <h2>The gong &amp; the Peter Hess® bowls</h2>
+      <p class="lede">
+        At the heart of the shala hangs a great gong. During a gong bath you simply lie down,
+        wrapped in a blanket, while waves of overtones wash through the room — thought quiets,
+        breath deepens, the body remembers how to rest. Alongside it live the Peter Hess®
+        therapeutic singing bowls, each tuned to resonate with a different region of the body.
+      </p>
+
+      <div class="gong-stage">
+        <div>
+          <div class="gong-holder reveal">
+            <svg class="gong-svg" id="gong" viewBox="0 0 300 300" role="button" tabindex="0" aria-label="Strike the gong">
+              <!-- wooden frame -->
+              <rect x="38" y="24" width="10" height="240" rx="4" fill="#8A6238"/>
+              <rect x="252" y="24" width="10" height="240" rx="4" fill="#8A6238"/>
+              <rect x="26" y="18" width="248" height="12" rx="6" fill="#9C7144"/>
+              <rect x="18" y="258" width="76" height="12" rx="6" fill="#9C7144"/>
+              <rect x="206" y="258" width="76" height="12" rx="6" fill="#9C7144"/>
+              <!-- ropes -->
+              <path d="M110 30 L128 62 M190 30 L172 62" stroke="#5C3A22" stroke-width="4" stroke-linecap="round"/>
+              <!-- gong disc -->
+              <g id="gongDisc">
+                <circle cx="150" cy="140" r="80" fill="#C69B45"/>
+                <circle cx="150" cy="140" r="80" fill="none" stroke="#8F6A25" stroke-width="5"/>
+                <circle cx="150" cy="140" r="58" fill="none" stroke="#A87F31" stroke-width="2.5" opacity=".8"/>
+                <circle cx="150" cy="140" r="36" fill="none" stroke="#A87F31" stroke-width="2.5" opacity=".8"/>
+                <circle cx="150" cy="140" r="16" fill="#E3C075"/>
+                <ellipse cx="122" cy="108" rx="26" ry="14" fill="#F2DCA2" opacity=".5" transform="rotate(-25 122 108)"/>
+              </g>
+              <!-- mallet -->
+              <g id="mallet">
+                <line x1="228" y1="252" x2="196" y2="196" stroke="#7A5230" stroke-width="6" stroke-linecap="round"/>
+                <circle cx="192" cy="190" r="14" fill="#EFE0C8" stroke="#C9B98F" stroke-width="2"/>
+              </g>
+            </svg>
+          </div>
+          <div class="gong-hint">tap the gong — go on, it rings ✨</div>
+        </div>
+        <div class="reveal">
+          <h3 style="font-size:1.4rem;color:var(--brass-light);margin-bottom:.8rem;">What a sound journey feels like</h3>
+          <p class="lede">
+            You arrive, you lie down, you do absolutely nothing — and that is the whole practice.
+            The gong builds slow tides of sound; the bowls are placed on and around the body,
+            their vibration felt as much as heard. Most people describe the hour after as
+            “the deepest rest I've had in years.”
+          </p>
+          <p class="lede" style="margin-top:1rem;">
+            Sound journeys happen every week — find them marked in gold on the schedule below.
+            No experience needed. Blankets provided. Snoring forgiven.
+          </p>
+        </div>
+      </div>
+
+      <!-- bowls -->
+      <div class="reveal" style="margin-top:3.5rem;text-align:center;">
+        <div class="script-lead">…or play the bowls yourself</div>
+        <div class="bowls-row" id="bowlsRow"></div>
+        <button class="btn btn-ghost bath-btn" id="bathBtn">▶ one-minute mini sound bath</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== BREATH INTERLUDE ==================== -->
+  <section class="breath section-pad" id="breathe">
+    <div class="wrap reveal">
+      <div class="eyebrow" style="justify-content:center;">An invitation</div>
+      <h2>Take one breath with us</h2>
+      <p class="lede" style="margin:0 auto;">Press the circle. Inhale as it blooms, exhale as it settles. That's it — you've already begun practising.</p>
+      <button class="breath-circle" id="breathCircle">begin</button>
+      <div class="breath-note" id="breathNote">one conscious breath can change the whole day</div>
+    </div>
+  </section>
+
+  <!-- ==================== SCHEDULE ==================== -->
+  <section class="section-pad" id="schedule">
+    <div class="wrap">
+      <div class="eyebrow">Weekly rhythm</div>
+      <div class="script-lead">Come as you are. Leave a little lighter.</div>
+      <h2>Class schedule</h2>
+      <div class="sched-grid">
+        <div class="day-card reveal"><h3>Monday</h3>
+          <div class="class"><span class="t">18:00</span><span class="n">Hatha — grounding</span></div>
+          <div class="class"><span class="t">19:30</span><span class="n">Beginners' course</span></div>
+        </div>
+        <div class="day-card reveal" style="transition-delay:.06s"><h3>Tuesday</h3>
+          <div class="class"><span class="t">07:30</span><span class="n">Sunrise Vinyasa</span></div>
+          <div class="class"><span class="t">19:00</span><span class="n">Yin &amp; stillness</span></div>
+        </div>
+        <div class="day-card reveal" style="transition-delay:.12s"><h3>Wednesday</h3>
+          <div class="class"><span class="t">18:00</span><span class="n">Hatha flow</span></div>
+          <div class="class special"><span class="t">19:45</span><span class="n">✦ Gong bath</span></div>
+        </div>
+        <div class="day-card reveal" style="transition-delay:.18s"><h3>Thursday</h3>
+          <div class="class"><span class="t">07:30</span><span class="n">Sunrise Vinyasa</span></div>
+          <div class="class"><span class="t">18:30</span><span class="n">Hatha — all levels</span></div>
+        </div>
+        <div class="day-card reveal" style="transition-delay:.24s"><h3>Friday</h3>
+          <div class="class special"><span class="t">18:30</span><span class="n">✦ Restorative + Peter Hess® bowls</span></div>
+        </div>
+        <div class="day-card reveal" style="transition-delay:.3s"><h3>Saturday</h3>
+          <div class="class"><span class="t">09:30</span><span class="n">Slow morning flow</span></div>
+          <div class="class special"><span class="t">11:15</span><span class="n">✦ Monthly sound journey</span></div>
+        </div>
+        <div class="day-card reveal" style="transition-delay:.36s"><h3>Sunday</h3>
+          <div class="class"><span class="rest">rest — the seventh posture 🤍</span></div>
+        </div>
+      </div>
+      <p class="sched-note">✦ gold classes are sound-healing sessions — booking recommended, spaces are cosy. Drop-ins welcome at all movement classes; please arrive 10 minutes early for your first visit.</p>
+    </div>
+  </section>
+
+  <!-- ==================== VISIT ==================== -->
+  <section class="section-pad" id="visit" style="background:var(--sand);">
+    <div class="wrap">
+      <div class="eyebrow">Find your way home</div>
+      <h2>Visit the shala</h2>
+      <div class="visit-grid">
+        <div class="visit-card reveal">
+          <div class="line">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--brass-light)" stroke-width="1.8"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            <div><strong>Yoga Shala Shangri La</strong><br>Str. Exemplu nr. 12<br>300001 Timișoara, Romania</div>
+          </div>
+          <div class="line">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--brass-light)" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            <div>Doors open 15 minutes before class.<br>Mats, props &amp; tea provided.</div>
+          </div>
+          <div class="line">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--brass-light)" stroke-width="1.8"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg>
+            <div>Free street parking nearby;<br>bicycle racks at the entrance.</div>
+          </div>
+        </div>
+        <div class="map-frame reveal">
+          <iframe title="Map to Yoga Shala Shangri La"
+            src="https://www.google.com/maps?q=Timisoara%2C%20Romania&z=14&output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT ==================== -->
+  <section class="section-pad" id="contact">
+    <div class="wrap" style="text-align:center;">
+      <div class="eyebrow" style="justify-content:center;">Say hello</div>
+      <div class="script-lead">The kettle is on. The mat is waiting.</div>
+      <h2>Contact</h2>
+      <p class="lede" style="margin:0 auto;">Questions about classes, private sessions, or booking a sound journey for your group? Reach out — you'll always get a human, never a robot.</p>
+      <div class="contact-grid">
+        <a class="contact-card reveal" href="mailto:hello@yogashala-shangrila.ro">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--plum)" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+          <div class="label">Email</div>
+          <div class="value">hello@yogashala-shangrila.ro</div>
+        </a>
+        <a class="contact-card reveal" style="transition-delay:.1s" href="tel:+40712345678">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--plum)" stroke-width="1.7"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+          <div class="label">Phone / WhatsApp</div>
+          <div class="value">+40 712 345 678</div>
+        </a>
+        <a class="contact-card reveal" style="transition-delay:.2s" href="https://instagram.com" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--plum)" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="var(--plum)"/></svg>
+          <div class="label">Instagram</div>
+          <div class="value">@yogashala.shangrila</div>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ==================== FOOTER ==================== -->
+<footer>
+  <img class="f-logo" src="assets/logo-white.png" alt="">
+  <div class="f-script">Welcome home… to the paradise within ♡</div>
+  <small>© 2026 Yoga Shala Shangri La · Timișoara · all bodies, all breaths welcome</small>
+</footer>
+
+<!-- ==================== FLOATING NEXT-BREATH ==================== -->
+<button class="next-breath" id="nextBreath" aria-label="Float to the next section">
+  <svg class="ring" viewBox="0 0 62 62" aria-hidden="true">
+    <circle class="bg" cx="31" cy="31" r="28"/>
+    <circle class="fg" id="ringFg" cx="31" cy="31" r="28" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+  </svg>
+  <img class="mini" src="assets/logo.png" alt="" aria-hidden="true">
+  <span class="tip">float to the next section</span>
+</button>
+
+<script src="scripts.js"></script>
+</body>
+</html>
